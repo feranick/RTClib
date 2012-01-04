@@ -11,7 +11,7 @@
 #define SECONDS_FROM_1970_TO_2000 946684800
 
 #if ARDUINO > 22
-#include <arduino.h>
+#include <Arduino.h>
 #endif
 
 #if ARDUINO <= 22
@@ -23,7 +23,7 @@ int i = 0; //The new wire library needs to take an int when you are sending for 
 ////////////////////////////////////////////////////////////////////////////////
 // utility code, some of this could be exposed in the DateTime API if needed
 
-static uint8_t daysInMonth [] PROGMEM = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+const uint8_t daysInMonth [] PROGMEM = { 31,28,31,30,31,30,31,31,30,31,30,31 };
 
 // number of days since 2000/01/01, valid for 2001..2099
 static uint16_t date2days(uint16_t y, uint8_t m, uint8_t d) {
